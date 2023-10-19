@@ -1,0 +1,35 @@
+#Selecione a pasta Unidade_5 sob a IDE MS Visual Code. Em seguida, crie o
+arquivo Tarefa5_05.html. No arquivo a ser editado, tecle ! e selecione a
+opção default para definir o template do arquivo HTML.
+Em seguida, modifique as tags <title> e <body> com o código abaixo:
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link real="stylesheet" href="css_Tarefa_5_05.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="email" id="emailField"
+            placeholder="Digite aqui seu email" requered>
+            <button type="button" class="login-button"
+            onclick="showEmail()">Login</button>
+        </form>
+        <p id="result"></p>
+    </div>
+    <script>
+        function showEmail() {
+            const emailField = document.getElementById("emailField");
+            const result = document.getElementById("result");
+            const email = emailField.value;
+            result.innerHTML = `O e-mail digitado é:
+            <span style= 'color: green;
+            font-weight: bold;'>${email}</span>`;
+            console.log("Email digitado:" +email);
+        }
+        </script>
+</body>
+</html>
